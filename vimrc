@@ -43,21 +43,19 @@ call plug#begin('~/.vim/plugged.vim')
 " NERDTree
   Plug 'preservim/nerdtree'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-" Plug 'ycm-core/YouCompleteMe',{ 'do': './install.py --tern-completer' }
-  Plug 'Valloric/YouCompleteMe',{ 'do': './install.py --tern-completer' }
-" Plug 'codota/tabnine-vim'          " 代码自动完成
+" Plug 'Valloric/YouCompleteMe'
 "
 " Plug 'dracula/vim'
 
 " html
-if count('g:language_group', 'html')
-  Plug 'docunext/closetag.vim' " 自动关闭 HTML 标签
-endif
+" if count(g:language_group, 'html')
+"   Plug 'docunext/closetag.vim' " 自动关闭 HTML 标签
+" endif
 
 " go
-if count('g:language_group', 'go')
-    Plug 'fatih/vim-go',{'for':'go'}
-endif
+" if count(g:language_group, 'go')
+"   Plug 'fatih/vim-go',{'for':'go'}
+" endif
 
 call plug#end()
 
