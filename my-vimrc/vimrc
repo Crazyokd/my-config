@@ -91,6 +91,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+let g:NERDTreeWinSize=20
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
