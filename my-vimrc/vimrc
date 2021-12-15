@@ -1,3 +1,5 @@
+" let mapleader = ','  " define <mapleader> key
+
 " basic config
 set nocompatible     " 设置不兼容原始vi模式
 
@@ -42,8 +44,12 @@ call plug#begin('~/.vim/plugged.vim')
 
 " NERDTree
   Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+  Plug 'chxuan/change-colorscheme'
 " Plug 'Valloric/YouCompleteMe'
+"
+" Plug 'jeaye/color_coded'
 "
 " Plug 'dracula/vim'
 
@@ -68,3 +74,44 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+" nerdtree-git-plugin
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+            \ "Modified"  : "✹",
+            \ "Staged"    : "✚",
+            \ "Untracked" : "✭",
+            \ "Renamed"   : "➜",
+            \ "Unmerged"  : "═",
+            \ "Deleted"   : "✖",
+            \ "Dirty"     : "✗",
+            \ "Clean"     : "✔︎",
+            \ 'Ignored'   : '☒',
+            \ "Unknown"   : "?"
+            \ }
+
+" nerdtree
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeHighlightFolders = 1
+let g:NERDTreeHighlightFoldersFullName = 1
+let g:NERDTreeDirArrowExpandable='▷'
+let g:NERDTreeDirArrowCollapsible='▼'
+
+" change-colorscheme
+nnoremap <silent> <F9> :PreviousColorScheme<cr>
+inoremap <silent> <F9> <esc> :PreviousColorScheme<cr>
+nnoremap <silent> <F10> :NextColorScheme<cr>
+inoremap <silent> <F10> <esc> :NextColorScheme<cr>
+nnoremap <silent> <F11> :RandomColorScheme<cr>
+inoremap <silent> <F11> <esc> :RandomColorScheme<cr>
+nnoremap <silent> <F12> :ShowColorScheme<cr>
+inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
+
+" 分屏窗口移动
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
