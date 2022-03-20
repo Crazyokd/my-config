@@ -1,0 +1,2 @@
+# install java
+pkg install openjdk-17
